@@ -18,17 +18,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <Button
         android:id="@+id/button_aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/about_elias"
+        app:layout_constraintBottom_toTopOf="@id/toLetterActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+
+    <Button
+        android:id="@+id/toLetterActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonToLetter"
+        android:text="@string/letter_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/button_aboutme" />
     <!--
     should this be commented?
     <Button

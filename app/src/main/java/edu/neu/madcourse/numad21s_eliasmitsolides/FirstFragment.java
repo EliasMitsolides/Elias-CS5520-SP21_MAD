@@ -1,5 +1,6 @@
 package edu.neu.madcourse.numad21s_eliasmitsolides;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,5 +41,13 @@ public class FirstFragment extends Fragment {
 //                        .setAction("Action", null).show();
             }
         });
+    }
+
+
+    public void buttonToLetter(View view)
+    {
+//        Intent intentFromMainToLetter = new Intent(this, MainActivityLetter.class);
+//        startActivity(intentFromMainToLetter);
+
     }
 }
