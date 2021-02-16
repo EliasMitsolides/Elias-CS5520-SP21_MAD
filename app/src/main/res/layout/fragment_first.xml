@@ -7,6 +7,8 @@
     tools:context=".FirstFragment">
 
     <!-- android:text="@string/hello_first_fragment" -->
+
+
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
@@ -14,30 +16,45 @@
         android:text="@string/hello_world"
         app:layout_constraintBottom_toTopOf="@id/button_aboutme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
 
     <Button
         android:id="@+id/button_aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text="@string/about_elias"
-        app:layout_constraintBottom_toTopOf="@id/toLetterActivity"
+        app:layout_constraintBottom_toTopOf="@+id/toLetterActivity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/toLetterActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
         android:onClick="buttonToLetter"
         android:text="@string/letter_activity"
+        app:layout_constraintBottom_toTopOf="@+id/ToLinkList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ToLinkList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+
+        android:onClick="buttonToList"
+        android:text="List o' Links"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_aboutme" />
+        app:layout_constraintStart_toStartOf="parent" />
     <!--
     should this be commented?
     <Button

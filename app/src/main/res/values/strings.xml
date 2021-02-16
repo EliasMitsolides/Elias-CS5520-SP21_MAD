@@ -22,4 +22,10 @@
     <string name="letter_of_button_b">B</string>
     <string name="letter_of_button_a">A</string>
     <string name="letter_activity">Letter Activity</string>
+    <string name="item_name">item_name</string>
+    <string name="url">URL</string>
+    <string name="type_a_url_below">Type A URL Below</string>
+    <string name="addlink">Add Link</string>
+    <string name="cancel">Cancel</string>
+    <string name="link_name">Link Name</string>
 </resources>

@@ -24,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
     //This seems to be where the first stuff happens?
     //Where the creation, bootup, and initial showing of the pixel takes place
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        int i = 0;
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intentFromMainToLetter = new Intent(this, MainActivityLetter.class);
         startActivity(intentFromMainToLetter);
 
+    }
+
+    public void buttonToList(View view)
+    {
+        Intent intentFromMainToLink = new Intent(this, MainActivityUrlList.class);
+        startActivity(intentFromMainToLink);
     }
 
 

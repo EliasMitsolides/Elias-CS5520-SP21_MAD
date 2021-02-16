@@ -50,4 +50,10 @@ public class FirstFragment extends Fragment {
 //        startActivity(intentFromMainToLetter);
 
     }
+
+    public void buttonToList(View view)
+    {
+//        Intent intentFromMainToLink = new Intent(this, MainActivityUrlList.class);
+//        startActivity(intentFromMainToLink);
+    }
 }
