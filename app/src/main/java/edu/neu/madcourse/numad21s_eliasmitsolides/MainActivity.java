@@ -1,19 +1,25 @@
 package edu.neu.madcourse.numad21s_eliasmitsolides;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,20 +31,46 @@ public class MainActivity extends AppCompatActivity {
     //This seems to be where the first stuff happens?
     //Where the creation, bootup, and initial showing of the pixel takes place
 
+    // Register the permissions callback, which handles the user's response to the
+    // system permissions dialog. Save the return value, an instance of
+    // ActivityResultLauncher, as an instance variable.
+    private int permissionGranted;
+    //this will be changed/called when 'requestPermissionLauncher.launch' in onCreate returns
+    //   here I edit the permission granted int of mine
+    private final ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+                    permissionGranted = 1;
+                } else {
+                    // Explain to the user that the feature is unavailable because the
+                    // features requires a permission that the user has denied. At the
+                    // same time, respect the user's decision. Don't link to system
+                    // settings in an effort to convince the user to change their
+                    // decision.
+                    Toast.makeText(MainActivity.this, "Geolocation Permission Denied By User", Toast.LENGTH_SHORT).show();
+                    permissionGranted = 0;
 
-
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        int i = 0;
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        if (ContextCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED){
+            this.permissionGranted = 1;
+        }else{
+            // You can directly ask for the permission.
+            // The registered ActivityResultCallback gets the result of this request.
+            requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION );
+        }
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -49,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
     }
+
+
+
 
     public void buttonToLetter(View view)
     {
@@ -61,6 +96,19 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intentFromMainToLink = new Intent(this, MainActivityUrlList.class);
         startActivity(intentFromMainToLink);
+    }
+
+    public void buttonToLatLong(View view)
+    {
+        //RequestPermission();
+        if (this.permissionGranted == 1) {
+            Intent intentFromMainToLL = new Intent(this, ActivityLatLong.class);
+            startActivity(intentFromMainToLL);
+        }
+        else{
+            Toast.makeText(MainActivity.this, "Geolocation Permission Was Not Granted", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 

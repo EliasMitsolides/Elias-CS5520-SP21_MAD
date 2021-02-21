@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.neu.madcourse.numad21s_eliasmitsolides">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_em"
@@ -10,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_em_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD21SEliasMitsolides">
+
+        <activity android:name=".ActivityLatLong"></activity>
+        <service
+            android:name="ActivityLatLong"
+            android:foregroundServiceType="location">
+        </service>
 
         <activity android:name=".MainActivityLetter" />
         <activity
@@ -22,10 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivityUrlList">
-
-        </activity>
+        <activity android:name=".MainActivityUrlList" />
     </application>
 
 </manifest>

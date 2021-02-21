@@ -28,4 +28,7 @@
     <string name="addlink">Add Link</string>
     <string name="cancel">Cancel</string>
     <string name="link_name">Link Name</string>
+    <string name="latitude_amp_longitude"><![CDATA[Latitude & Longitude]]></string>
+    <string name="your_current_latitude">Your Current Latitude: </string>
+    <string name="your_current_longitude">Your Current Longitude: </string>
 </resources>

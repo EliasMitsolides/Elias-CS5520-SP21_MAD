@@ -56,4 +56,11 @@ public class FirstFragment extends Fragment {
 //        Intent intentFromMainToLink = new Intent(this, MainActivityUrlList.class);
 //        startActivity(intentFromMainToLink);
     }
+
+    public void buttonToLatLong(View view)
+    {
+//        Intent intentFromMainToLL = new Intent(this, ActivityLatLong.class);
+//        startActivity(intentFromMainToLL);
+
+    }
 }
