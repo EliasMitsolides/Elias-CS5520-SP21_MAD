@@ -63,4 +63,9 @@ public class FirstFragment extends Fragment {
 //        startActivity(intentFromMainToLL);
 
     }
+    public void buttonToPictures(View view)
+    {
+        //Intent intentFromMainToPictures = new Intent(this, ActivityPictureLibrary.class);
+//        startActivity(intentFromMainToPictures);
+    }
 }

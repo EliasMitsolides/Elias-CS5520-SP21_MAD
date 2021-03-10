@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void buttonToPictures(View view)
+    {
+        Intent intentFromMainToPictures = new Intent(this, ActivityPictureLibrary.class);
+        startActivity(intentFromMainToPictures);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
