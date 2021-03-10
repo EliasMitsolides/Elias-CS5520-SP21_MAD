@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPictureLibrary">
 
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="240dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Choose A Number Between 1 And 5000"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/between_1_and_5000"
+
+        android:importantForAutofill="no"
+
+
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/getPhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="15dp"
+
+        android:onClick="getPhotoButton"
+        android:text="@string/get_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+
+    <TextView
+        android:id="@+id/webNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/note_a_web_browser_will_be_opened_displaying_your_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPhotoButton" />
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="182dp"-->
+<!--        android:layout_height="236dp"-->
+<!--        android:layout_marginBottom="100dp"-->
+<!--        android:contentDescription="@string/this_is_where_a_retrieved_image_will_be_rendered"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_help" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,4 +31,10 @@
     <string name="latitude_amp_longitude"><![CDATA[Latitude & Longitude]]></string>
     <string name="your_current_latitude">Your Current Latitude: </string>
     <string name="your_current_longitude">Your Current Longitude: </string>
+    <string name="picture_library">Picture Library</string>
+    <string name="choose_a_number_between_1_and_5000">Choose A Number Between 1 And 5000</string>
+    <string name="between_1_and_5000">Between 1 And 5000...</string>
+    <string name="get_photo">Get Photo</string>
+    <string name="this_is_where_a_retrieved_image_will_be_rendered">This Is Where A Retrieved Image Will Be Rendered</string>
+    <string name="note_a_web_browser_will_be_opened_displaying_your_image">Note: A Web Browser Will Be Opened Displaying Your Image</string>
 </resources>

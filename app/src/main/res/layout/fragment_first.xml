@@ -25,9 +25,9 @@
         android:id="@+id/button_aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/about_elias"
-        app:layout_constraintBottom_toTopOf="@+id/toLetterActivity"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToPictureLibrary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
@@ -65,6 +65,19 @@
         android:text="@string/latitude_amp_longitude"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonToPictureLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+
+        android:onClick="buttonToPictures"
+        android:text="@string/picture_library"
+        app:layout_constraintBottom_toTopOf="@+id/toLetterActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
     <!--
     should this be commented?
